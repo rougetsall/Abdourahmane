@@ -24,7 +24,7 @@ export default class Home extends React.Component {
         var that = this;
         
         
-        var jour = 4;//new Date().getDay();
+        var jour = new Date().getDay();
         var hours = new Date().getHours();
         var min = new Date().getMinutes();
         var sec = new Date().getSeconds(); 
