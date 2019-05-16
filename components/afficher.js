@@ -136,7 +136,8 @@ export default class Home extends React.Component {
                     restseconder:60-Second+" secondes "
                 })
             }
-            if (heur>17){
+           
+            if (heur>=17){
                 if (munite<37) {
                     this.setState({
                         restjour:2,
@@ -256,40 +257,49 @@ export default class Home extends React.Component {
             
         }
         if (jour===4) {
-            if (heur<=2) {
+            
+            if (heur<2) {
                 if (munite<=37) {
                     this.setState({
                         note:"il reste ",
                         
-                        restheur:1-heur+" heure, ",
+                        restheur:2-heur+" heure, ",
                         restmunite:36-munite+" minutes et ",
                         restseconder:60-Second+" secondes "
                     })
 
                 }if (munite>37){
-                    if (munite>45) {
-                        this.setState({
-                            restjour:2+" jours,",
-                            note:"il reste ",
-                            restheur:14-heur+" heure, ",
-                            restmunite:104-munite+" minutes et ",
-                            restseconder:60-Second+" secondes "
-                        })
-                    }
-                    if (munite<45) {
-                        this.setState({
-                            restjour:2+" jours,",
-                            note:"il reste ",
-                            restheur:14-heur+" heure, ",
-                            restmunite:44-munite+" minutes et ",
-                            restseconder:60-Second+" secondes "
-                        })
-                    }
+                    this.setState({
+                        note:"il reste ",
+                        
+                        restheur:1-heur+" heure, ",
+                        restmunite:96-munite+" minutes et ",
+                        restseconder:60-Second+" secondes "
+                    })
+                    
                     
                 }
                 
             }
-        
+            if (heur==2) {
+                if (munite<37) {
+                    this.setState({
+                        note:"il reste ",
+                        restmunite:36-munite+" minutes et ",
+                        restseconder:60-Second+" secondes "
+                    })
+                }
+                if (munite>=37) {
+                    this.setState({
+                        restjour:2+" jours ,",
+                        note:"il reste ",
+                        restheur:14-heur+" heure, ",
+                        restmunite:44-munite+"minutes et ",
+                        restseconder:60-Second+" secondes "
+                    })
+                }
+                
+            }
             if (heur>2 && heur<14) {
                 if (munite<=45) {
                     this.setState({
@@ -380,8 +390,8 @@ export default class Home extends React.Component {
             
         }
         if (jour===6) {
-            if (heur<=14) {
-                if (munite<=45) {
+            if (heur<14) {
+                if (munite<45) {
                     this.setState({
                         note:"il reste ",
                         
@@ -402,6 +412,25 @@ export default class Home extends React.Component {
                     
                 
                     
+                }
+                
+            }
+            if (heur==14) {
+                if (munite<45) {
+                    this.setState({
+                        note:"il reste ",
+                        restmunite:44-munite+" minutes et ",
+                        restseconder:60-Second+" secondes "
+                    })
+                }
+                if (munite>=45) {
+                    this.setState({
+                        restjour:2+" jours ,",
+                        note:"il reste ",
+                        restheur:17-heur+" heure, ",
+                        restmunite:munite-1+"minutes et ",
+                        restseconder:60-Second+" secondes "
+                    })
                 }
                 
             }
