@@ -46,7 +46,7 @@ export default class Home extends React.Component {
         }
         if (jour>4 && jour<6) {
             this.setState({
-                evenement:'-Les samedis à 14h54'
+                evenement:'-Les samedis à 14h45'
             })
             
         }
@@ -62,23 +62,23 @@ export default class Home extends React.Component {
         }
         if (jour==4 && hours==2 && min>37) {
             this.setState({
-                evenement:'-Les samedis à 14h54'
+                evenement:'-Les samedis à 14h45'
             })
         }
         if (jour==4 && hours>2) {
             this.setState({
-                evenement:'-Les samedis à 14h54'
+                evenement:'-Les samedis à 14h45'
             })
         }
         if (jour==6 && hours<14) {
             this.setState({
-                evenement:'-Les samedis à 14h54'
+                evenement:'-Les samedis à 14h45'
             })
             
         }
         if (jour==6 && hours==14 && min<45) {
             this.setState({
-                evenement:'-Les samedis à 14h54'
+                evenement:'-Les samedis à 14h45'
             })
             
         }
@@ -493,7 +493,7 @@ export default class Home extends React.Component {
         const inputAccessoryViewID = "uniqueID";
       return (
         <View style={style.view}>
-             <Text>Date de L'Evenemts:</Text>
+             <Text>Date de l'Evenement:</Text>
              <Text> {this.state.evenement}</Text>
              
                <Button
