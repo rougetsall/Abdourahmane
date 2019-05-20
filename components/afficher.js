@@ -131,7 +131,7 @@ export default class Home extends React.Component {
             if (heur<17) {
                 this.setState({
                     note:"il reste ",
-                    restheur:17-heur+" heure, ",
+                    restheur:16-heur+" heure, ",
                     restmunite:59-munite+" minutes et ",
                     restseconder:60-Second+" secondes "
                 })
@@ -525,13 +525,14 @@ export default class Home extends React.Component {
         fontSize:22,
         marginTop:70,
         marginLeft:10,
+        width:150,
         color: 'blue',
         fontWeight: 'bold',
         backgroundColor: '#DF0101'
       },
     view:{
         marginTop:80,
-        marginLeft:40,
+        marginLeft:10,
     },
     input:{
         height:40,
